@@ -65,7 +65,7 @@ main {
 			padding-left: 20px;
 		}
 		.section-body {
-			min-height: 60vh;
+			min-height: 70vh;
 			width: auto;
 		}
 	}
