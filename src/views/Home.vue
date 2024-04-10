@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="container-fluid d-flex flex-row-reverse justify-content-between pt-3"
+		class="container-fluid d-flex flex-row-reverse justify-content-between pt-0"
 	>
 		<Header></Header>
 		<main class="ms-5 ps-5">
@@ -42,7 +42,7 @@ const sections = [
 	},
 	{
 		title: "GALERIA",
-		clase: "",
+		clase: "d-flex flex-column gap-2 justify-content-center",
 	},
 	{
 		title: "SOBRE MI",
@@ -50,7 +50,7 @@ const sections = [
 	},
 	{
 		title: "CONTACTO",
-		clase: "",
+		clase: "mb-5",
 	},
 ];
 </script>
@@ -59,13 +59,14 @@ const sections = [
 main {
 	width: 60%;
 	section {
-		padding-top: 14.45vh;
+		padding-top: 8vh;
+		min-height: 100vh;
 		.section-body:nth-child(n) {
 			padding-left: 20px;
 		}
 		.section-body {
-			height: 85vh;
-			max-height: auto;
+			min-height: 60vh;
+			width: auto;
 		}
 	}
 }

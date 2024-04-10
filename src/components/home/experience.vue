@@ -1,8 +1,8 @@
 <template>
-	<div
+	<article
 		v-for="(item, index) in experiencies"
 		:key="index"
-		class="experience-container d-flex w-100 mb-3 p-3 rounded-4 align-items-center"
+		class="experience-container d-flex w-100 mb-3 p-4 rounded-4 align-items-center"
 	>
 		<div class="title">
 			<h3 class="mb-0">{{ item.company }}</h3>
@@ -15,12 +15,12 @@
 				<span
 					v-for="(element, index) in item.tags"
 					:key="index"
-					class="tag bg-primary bg-opacity-25 text-info fw-bold rounded-5 text-nowrap"
+					class="tag bg-primary bg-opacity-25 text-info rounded-5 text-nowrap"
 					>{{ element }}</span
 				>
 			</div>
 		</div>
-	</div>
+	</article>
 </template>
 <script setup>
 name: "Experience";

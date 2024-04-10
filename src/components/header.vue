@@ -2,7 +2,7 @@
 	<div class="ms-3 position-relative contenedor-header me-3">
 		<header class="position-sticky">
 			<section>
-				<h1>{{ name }}</h1>
+				<h1 class="mb-3">{{ name }}</h1>
 				<h2>{{ job }}</h2>
 				<p>{{ summary }}</p>
 			</section>
