@@ -42,7 +42,7 @@ const sections = [
 	},
 	{
 		title: "GALERIA",
-		clase: "d-flex flex-column gap-2 justify-content-center",
+		clase: "d-flex flex-column gap-2 justify-content-start",
 	},
 	{
 		title: "SOBRE MI",

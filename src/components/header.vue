@@ -14,7 +14,7 @@
 							class="d-flex align-items-center w-75 nav-item"
 							
 							><span
-								class="nav-line bg-secondary me-3"
+								class="nav-line bg-secondary me-2"
 								:class="{ active: activeSection === index }"
 							></span
 							>{{ item }}</a
@@ -88,7 +88,7 @@ onUnmounted(() => {
 		}
 		a:hover .nav-line,
 		.nav-line.active {
-			width: 60px;
+			width: 55px;
 			background-color: rgb(30, 207, 219) !important;
 			height: 2px;
 		}
