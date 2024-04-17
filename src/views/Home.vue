@@ -1,20 +1,16 @@
 <template>
-	<div
-		class="container-fluid d-flex flex-row-reverse justify-content-between pt-0"
-	>
+	<ul class="background">
+		<li v-for="item in range(0, 40)" @animationend="updateRandom(item)" :style="{ left: randomNumbers[item] + 'vw', width: item * 3.5  + 'px', height: item * 3.5 + 'px', animationDuration: item * 5/4 + 's'}" class="d-flex justify-content-center align-items-center bg-info bg-opacity-25">
+			<div class=" w-75 h-75"></div>
+		</li>
+	</ul>
+	<div class="contain-all container-fluid d-flex flex-row-reverse justify-content-between pt-0">
 		<Header></Header>
-		<main class="ms-5 ps-5">
-			<section
-				v-for="(item, index) in sections"
-				:key="index"
-				:id="index"
-				class="h-auto"
-			>
+
+		<main class="ms-5">
+			<section v-for="(item, index) in sections" :key="index" :id="index" class="h-auto">
 				<h2>{{ item.title }}</h2>
-				<div
-					class="border-start border-2 border-secondary section-body"
-					:class="item.clase"
-				>
+				<div class="border-start border-2 border-secondary section-body" :class="item.clase">
 					<Experience v-if="item.title == 'EXPERIENCIA'"></Experience>
 					<galery v-else-if="item.title == 'GALERIA'"></galery>
 					<about v-else-if="item.title == 'SOBRE MI'"></about>
@@ -31,6 +27,7 @@ import galery from "../components/home/galery.vue";
 import about from "../components/home/about.vue";
 import contact from "../components/home/contact.vue";
 import Header from "../components/header.vue";
+import { ref, onMounted, onUnmounted } from 'vue';
 name: "home";
 components: {
 	Experience, galery, about, contact, Header;
@@ -53,20 +50,56 @@ const sections = [
 		clase: "mb-5",
 	},
 ];
+let randomNumbers = [];
+for (var i = 0; i < 40; i++) {
+	randomNumbers.push(Math.floor(Math.random()*100)) 
+}
+
+let range = (s, e) => Array.from('x'.repeat(e - s), (_, i) => s + i);
+
+const screenSize = ref(window.innerWidth);
+
+const handleResize = () => {
+	screenSize.value = window.innerWidth;
+};
+
+onMounted(() => {
+	window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+	window.removeEventListener('resize', handleResize);
+});
 </script>
 
 <style scoped lang="scss">
 main {
 	width: 60%;
+
 	section {
 		padding-top: 8vh;
 		min-height: 100vh;
+
 		.section-body:nth-child(n) {
 			padding-left: 20px;
 		}
+
 		.section-body {
 			min-height: 70vh;
 			width: auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 849px) {
+	.contain-all {
+		display: block !important;
+		max-width: 70%;
+
+		main {
+			width: 100%;
+			margin: 0 !important;
+			padding: 0 !important;
 		}
 	}
 }
