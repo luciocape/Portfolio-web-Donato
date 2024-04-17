@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper w-100 d-flex align-items-center justify-content-start">
-        <div class="w-100 d-flex justify-content-start flex-column flex-lg-row lex-nowrap gap-2">
+        <div class="w-100 d-flex justify-content-start flex-column flex-lg-row lex-nowrap gap-3">
             <article v-for="item in videos" class="container d-flex flex-nowrap justify-content-start m-0 p-0">
                 <input type="radio" name="slide" :id="item.id" :checked="item.state" class="d-none" />
                 <label :for="item.id" class="card rounded-5 overflow-hidden align-items-start justify-content-end p-2">

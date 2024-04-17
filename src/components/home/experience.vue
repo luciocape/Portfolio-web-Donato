@@ -47,16 +47,18 @@ const experiencies = [
 
 <style scoped lang="scss">
 .experience-container {
-	background-color: #6c757d28;
+	background-color: #0b0f1ebd;
 	height: 100%;
 	border: 1px solid transparent;
-	transition: 250ms;
+	transition: 300ms;
+	box-shadow: 0px 0px 20px -5.5px rgba(14, 67, 92, 0.8);
 }
 
 .experience-container:hover {
-	background-color: #5e97f32d;
+	background-color: #182741ec;
 	border-top: 1px solid rgba(245, 245, 245, 0.158);
 	border-right: 1px solid rgba(245, 245, 245, 0.158);
+	box-shadow: none;
 
 	// --bs-bg-opacity: .01;
 }
