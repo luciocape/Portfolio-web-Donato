@@ -23,13 +23,12 @@ import { RouterLink, RouterView } from 'vue-router'
   overflow: hidden;
   
   li {
-
     border-radius: 47% 53% 46% 45%;
     position: absolute;
     display: block;
     list-style: none;
-    bottom: -184px;
-    animation: animate 5s linear infinite;
+    bottom: -100px;
+    animation: animate linear infinite;
 
     div{
       border: 1px solid rgba(131, 247, 255, 0.342);

@@ -1,5 +1,5 @@
 <template>
-	<nav class="mt-2" v-if="screenSize >= 850">
+	<nav class="mt-2">
 		<ul>
 			<li v-for="(item, index) in nav" :key="index" class="mb-3">
 				<a :href="'#' + index" class="d-flex align-items-center w-75 nav-item"><span
@@ -28,20 +28,12 @@ const checkScroll = () => {
 	}
 };
 
-const screenSize = ref(window.innerWidth);
-
-const handleResize = () => {
-	screenSize.value = window.innerWidth;
-};
-
 onMounted(() => {
 	window.addEventListener("scroll", checkScroll);
-	window.addEventListener('resize', handleResize);
 });
 
 onUnmounted(() => {
 	window.removeEventListener("scroll", checkScroll);
-	window.removeEventListener('resize', handleResize);
 });
 
 
