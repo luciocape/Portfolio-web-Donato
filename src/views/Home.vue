@@ -1,16 +1,18 @@
 <template>
 	<ul class="background">
-		<li v-for="item in range(0, 40)" @animationend="updateRandom(item)" :style="{ left: randomNumbers[item] + 'vw', width: item * 3.5  + 'px', height: item * 3.5 + 'px', animationDuration: item * 5/4 + 's'}" class="d-flex justify-content-center align-items-center bg-info bg-opacity-25">
+		<li v-for="item in range(0, 40)"
+			:style="{ left: randomNumbers[item] + 'vw', width: item * 0.28 + 'rem', height: item * 0.28 + 'rem', animationDuration: item * 5 / 4 + 's' }"
+			class="d-flex justify-content-center align-items-center bg-info bg-opacity-25">
 			<div class=" w-75 h-75"></div>
 		</li>
 	</ul>
 	<div class="contain-all container-fluid d-flex flex-row-reverse justify-content-between pt-0">
 		<Header></Header>
 
-		<main class="ms-5">
+		<main class="ms-3">
 			<section v-for="(item, index) in sections" :key="index" :id="index" class="h-auto">
 				<h2>{{ item.title }}</h2>
-				<div class="border-start border-2 border-secondary section-body" :class="item.clase">
+				<div class="border-start border-2 border-secondary section-body mt-1" :class="item.clase">
 					<Experience v-if="item.title == 'EXPERIENCIA'"></Experience>
 					<galery v-else-if="item.title == 'GALERIA'"></galery>
 					<about v-else-if="item.title == 'SOBRE MI'"></about>
@@ -35,7 +37,7 @@ components: {
 const sections = [
 	{
 		title: "EXPERIENCIA",
-		clase: "d-flex flex-column gap-2",
+		clase: "d-flex flex-column gap-3",
 	},
 	{
 		title: "GALERIA",
@@ -51,8 +53,9 @@ const sections = [
 	},
 ];
 let randomNumbers = [];
+
 for (var i = 0; i < 40; i++) {
-	randomNumbers.push(Math.floor(Math.random()*100)) 
+	randomNumbers.push(Math.floor(Math.random() * 100))
 }
 
 let range = (s, e) => Array.from('x'.repeat(e - s), (_, i) => s + i);
@@ -74,16 +77,19 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 main {
-	width: 60%;
+	width: 55%;
 
 	section {
-		padding-top: 8vh;
+		padding-top: 5vh;
 		min-height: 100vh;
 
-		.section-body:nth-child(n) {
-			padding-left: 20px;
+		h2 {
+			text-shadow: 1px 3px 7px #00aeff9a;
 		}
-
+		.section-body:nth-child(n) {
+			padding-left: 4%;
+			padding-top: 10px;
+		}
 		.section-body {
 			min-height: 70vh;
 			width: auto;
@@ -94,13 +100,23 @@ main {
 @media only screen and (max-width: 849px) {
 	.contain-all {
 		display: block !important;
-		max-width: 70%;
+		max-width: 75%;
+		min-width: 320px;
 
 		main {
 			width: 100%;
 			margin: 0 !important;
 			padding: 0 !important;
 		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+
+	.section-body:nth-child(n) {
+		border-top: 2px solid #6b757e;
+		border-left: 0px !important;
+		padding-left: 0px !important;
 	}
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="ms-3 position-relative contenedor-header me-3">
+	<div class="ms-2 position-relative contenedor-header">
 		<header class="position-sticky">
 			<section>
 				<div class="picture"></div>
@@ -42,7 +42,7 @@ const summary =
 
 <style scoped lang="scss">
 .contenedor-header {
-	width: 30%;
+	width: 38%;
 	header {
 		max-width: 100%;
 		top: 25px;
