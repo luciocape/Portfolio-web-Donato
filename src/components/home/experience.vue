@@ -1,12 +1,12 @@
 <template>
 	<article v-for="(item, index) in experiencies" :key="index"
-		class="experience-container d-flex w-100 mb-3 p-4 rounded-3 align-items-center">
+		class="experience-container d-flex w-100 p-4 rounded-3 align-items-center">
 		<div class="title">
 			<h3 class="mb-0">{{ item.company }}</h3>
 			<p class="mb-0">{{ item.job }}</p>
 			<p class="mb-0 duration">{{ item.duration }}</p>
 		</div>
-		<div class="ms-3 summary">
+		<div class="ms-3 summary w-auto">
 			<p class="mb-1">{{ item.description }}</p>
 			<div class="d-flex flex-wrap gap-2">
 				<span v-for="(element, index) in item.tags" :key="index"
@@ -23,7 +23,7 @@ const experiencies = [
 		job: "Editor de video",
 		duration: "2022-presente",
 		description:
-			"Esta empresa estaba bien culia, ademas no me pagaron un cho y me dijieron que tenia hasta el viernes para llevar a producción",
+			"lorem ipsum dolor sit amet, consectetur adipiscing el aspect ratio nisl con et et dolor in eget et dolore magna al e fits",
 		tags: ["Midjourney", "Canva", "Premier pro"],
 	},
 	{
@@ -31,7 +31,7 @@ const experiencies = [
 		job: "Editor de video",
 		duration: "2022-presente",
 		description:
-			"Esta empresa estaba bien culia, ademas no me pagaron un cho y me dijieron que tenia hasta el viernes para llevar a producción",
+			"lorem ipsum dolor sit amet, consectetur adipiscing el aspect ratio nisl con et et dolor in eget et dolore magna al e fits",
 		tags: ["Midjourney", "Canva", "Premier pro"],
 	},
 	{
@@ -39,9 +39,11 @@ const experiencies = [
 		job: "Editor de video",
 		duration: "2022-presente",
 		description:
-			"Esta empresa estaba bien culia, ademas no me pagaron un cho y me dijieron que tenia hasta el viernes para llevar a producción",
+			"lorem ipsum dolor sit amet, consectetur adipiscing el aspect ratio nisl con et et dolor in eget et dolore magna al e fits",
 		tags: ["Midjourney", "Canva", "Premier pro"],
 	},
+
+
 ];
 </script>
 
@@ -55,21 +57,18 @@ const experiencies = [
 }
 
 .experience-container:hover {
-	background-color: #182741ec;
+	background-color: #15224eab;
 	border-top: 1px solid rgba(245, 245, 245, 0.158);
-	border-right: 1px solid rgba(245, 245, 245, 0.158);
 	box-shadow: none;
 
 	// --bs-bg-opacity: .01;
 }
 
 .title {
-	width: 30%;
+	min-width: 30%;
 }
 
 .summary {
-	width: 65%;
-
 	.tag {
 		padding: 5px 10px;
 	}

@@ -1,5 +1,5 @@
 <template>
-	<p class="about lead text-start pt-4">
+	<p class="about lead text-start mb-0">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fuga error odit
 		quae recusandae laborum, dolore eum possimus. Praesentium veniam quia optio
 		<br><br>hic consequuntur incidunt delectus fugiat, reprehenderit ratione ipsam a

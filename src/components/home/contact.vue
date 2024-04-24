@@ -2,24 +2,13 @@
 	<form action="" method="POST" class="d-flex flex-column justify-content-center">
 		<div v-for="(item, index) in inputs" :key="index" class="inputs">
 			<label :for="item.for" class="form-label text-info lead">{{
-				item.label
-			}}</label>
-			<input
-				v-if="item.id != 'message'"
-				:type="item.type"
-				class="form-control form-controls mb-4 rounded-0"
-				:name="item.id"
-				:id="item.id"
-				:placeholder="item.placeholder"
-			/>
-			<textarea
-				v-else
-				class="form-control form-controls mb-2 rounded-0"
-				:name="item.id"
-				:id="item.id"
-				:placeholder="item.placeholder"
-				style="max-height: 120px"
-			></textarea>
+			item.label
+		}}</label>
+			<input v-if="item.id != 'message'" :autocomplete="item.autocomplete" :type="item.type"
+				class="form-control form-controls mb-4 rounded-0" :name="item.id" :id="item.id"
+				:placeholder="item.placeholder" />
+			<textarea v-else class="form-control form-controls mb-2 rounded-0" :name="item.id" :id="item.id"
+				:placeholder="item.placeholder" style="max-height: 120px"></textarea>
 		</div>
 		<input type="submit" class="btn btn-primary w-100 send rounded-0" style="width: 150px" />
 
@@ -31,6 +20,7 @@ name: "contact";
 const inputs = [
 	{
 		id: "name",
+		autocomplete: 'given-name',
 		for: "name",
 		placeholder: "Juan Perez",
 		label: "Tu nombre",
@@ -38,6 +28,7 @@ const inputs = [
 	},
 	{
 		id: "email",
+		autocomplete: "family-name",
 		for: "email",
 		placeholder: "juanperez@gmail.com",
 		label: "Tu correo electronico",
@@ -45,6 +36,7 @@ const inputs = [
 	},
 	{
 		id: "message",
+		autocomplete: "off",
 		for: "message",
 		placeholder: "Hola, me gustaria saber...",
 		label: "Tu mensaje",
@@ -55,14 +47,36 @@ const label = "Formulario";
 
 <style scoped lang="scss">
 form {
+	.inputs label:nth-child(1) {
+		margin-top: 0 !important;
+	}
+
 	input {
 		min-height: 60px;
 	}
-    textarea{
-        min-height: 120px;
-    }
-    .send{
-        height: 65px;
-    }
+
+	textarea {
+		min-height: 120px;
+	}
+
+	.send {
+		height: 65px;
+		transition: 500ms;
+	}
+
+	.send:hover {
+		background: linear-gradient(90deg, #0a254d9d 0%, #0dcaf0 120%);
+		animation: buttonHover 2s alternate infinite;
+	}
+
+	.form-control {
+		transition: 350ms;
+		background-color: rgba(16, 85, 85, 0.295) !important;
+		border: 1px solid rgba(255, 255, 255, 0.253);
+	}
+
+	.form-control:hover {
+		box-shadow: 0px 0px 20px -5.5px rgba(14, 67, 92, 0.8);
+	}
 }
 </style>
