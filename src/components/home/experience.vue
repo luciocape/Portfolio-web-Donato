@@ -48,12 +48,13 @@ const experiencies = [
 </script>
 
 <style scoped lang="scss">
+@import '../../assets/bootstrap-custom.scss';
 .experience-container {
 	background-color: #0b0f1ebd;
 	height: 100%;
 	border: 1px solid transparent;
 	transition: 300ms;
-	box-shadow: 0px 0px 20px -5.5px rgba(14, 67, 92, 0.8);
+	box-shadow: 0px 0px 20px -5.5px $box-shadow;
 }
 
 .experience-container:hover {

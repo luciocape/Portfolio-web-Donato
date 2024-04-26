@@ -12,7 +12,7 @@
 		<main class="ms-3">
 			<section v-for="(item, index) in sections" :key="index" :id="index" class="h-auto">
 				<h2>{{ item.title }}</h2>
-				<div class="border-start border-2 border-secondary section-body mt-1" :class="item.clase">
+				<div class="border-start border-2 border-tertiary section-body mt-1" :class="item.clase">
 					<Experience v-if="item.title == 'EXPERIENCIA'"></Experience>
 					<galery v-else-if="item.title == 'GALERIA'"></galery>
 					<about v-else-if="item.title == 'SOBRE MI'"></about>
@@ -76,6 +76,8 @@ onUnmounted(() => {
 </script>
 
 <style scoped lang="scss">
+@import '../assets/bootstrap-custom.scss';
+
 main {
 	width: 55%;
 
@@ -84,7 +86,7 @@ main {
 		min-height: 100vh;
 
 		h2 {
-			text-shadow: 1px 3px 7px #00aeff9a;
+			text-shadow: 1px 3px 7px $secondary;
 		}
 		.section-body:nth-child(n) {
 			padding-left: 4%;
@@ -98,6 +100,9 @@ main {
 }
 
 @media only screen and (max-width: 849px) {
+	section{
+		padding-top: 6rem !important;
+	}
 	.contain-all {
 		display: block !important;
 		max-width: 75%;
@@ -114,7 +119,7 @@ main {
 @media only screen and (max-width: 400px) {
 
 	.section-body:nth-child(n) {
-		border-top: 2px solid #6b757e;
+		border-top: 2px solid $tertiary;
 		border-left: 0px !important;
 		padding-left: 0px !important;
 	}

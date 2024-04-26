@@ -1,6 +1,14 @@
 
-@use "sass:math";
+$primary: #1ecfdb;
+$secondary: #0d6efd;
+$tertiary: #6c757d;
+$box-shadow: #107283cc;
+$bg-ocean: #060911;
+$bg-ocean-light: #0e1d47;
+$form-input: rgba(16, 85, 85, 0.295);
 
+
+// $shadows: ;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 // @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Onest:wght@100..900&display=swap');
@@ -9,21 +17,26 @@
 // @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Onest:wght@100..900&family=Patua+One&family=Russo+One&family=Saira+Stencil+One&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Onest:wght@100..900&family=Patua+One&family=Rampart+One&family=Russo+One&family=Saira+Stencil+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+
+
+
 *{
 	box-sizing: border-box;
 }
 body {
-	background-color: #0b0f1e;
+	background: radial-gradient(ellipse 90% 90% at 50% 0%,#0e1d47, #060911);
+	background-repeat: no-repeat;
 	font-family: "Krona one";
 	font-optical-sizing: auto;
 	font-weight: 100;
 	font-style: normal;
 	h1 {
-		color: $info;
+		color: $primary;
 		font-size: 2.2rem;
 	}
 	h2 {
-		color: $primary;
+		color: $secondary;
 		font-size: 1.5rem;
 	}
 	h3 {
@@ -31,10 +44,11 @@ body {
 		font-size: 1rem;
 	}
 	p {
-		color: $secondary;
+		color: $tertiary;
 		font-size: 0.8rem;
 	}
 	a {
+		color: $secondary;
 		text-decoration: none;
 	}
 	ul,
@@ -51,11 +65,37 @@ body {
 	.form-control::placeholder{
 		color: #b1bdc988!important;
 	}
-	
+
+
+}
+.border-tertiary {
+	border-color: $tertiary;
+}
+.bg-tertiary {
+	background-color: $tertiary !important;
+}
+.text-tertiary {
+	color: $tertiary;
 }
 
 //animationes
+.item-blur {
+	view-timeline-name: --item;
+	view-timeline-axis: block;
 
+	animation-timeline: --item;
+	animation-name: blur;
+	animation-range: entry 100vh cover 120vh;
+	animation-fill-mode: both;
+}
+@keyframes blur {
+    0%{
+    }
+    100%{
+		background-color: rgba(4, 21, 63, 0.753);
+		backdrop-filter: blur(30px);
+    }
+}
 
 @keyframes animate {
     0%{
