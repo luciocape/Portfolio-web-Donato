@@ -3,13 +3,13 @@
 		<ul>
 			<li v-for="(item, index) in nav" :key="index" class="mb-3">
 				<a :href="'#' + index" class="d-flex align-items-center w-75 nav-item"><span
-						class="nav-line bg-tertiary me-2" :class="{ active: activeSection === index }"></span>{{ item
+						class="nav-line bg-light-subtle me-2" :class="{ active: activeSection === index }"></span>{{ item
 					}}</a>
 			</li>
 		</ul>
 	</nav>
-	<nav class="mt-3 position-fixed top-0 start-0 w-100 rounded-5 p-3 item-blur" v-if="screenSize < 850">
-		<ul class="d-flex justify-content-around align-items-center m-0">
+	<nav class="mt-3 position-fixed top-0 start-0    w-100" v-if="screenSize < 850">
+		<ul class="d-flex justify-content-around align-items-center m-0 p-3 rounded-5 item-blur">
 			<li v-for="(item, index) in nav" :key="index" class="">
 				<a :href="'#' + index" class="d-flex flex-column-reverse align-items-start nav-item"><span
 						class="nav-line bg-tertiary me-2" :class="{ active: activeSection === index }"></span>{{ item
@@ -101,6 +101,12 @@ a:hover .nav-line,
 @media only screen and (max-width: 849px) {
 	nav {
 		z-index: 80;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		ul{
+			width: 95%;
+		}
 	}
 
 	.moon {

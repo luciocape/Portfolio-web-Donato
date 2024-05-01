@@ -72,15 +72,15 @@ onUnmounted(() => {
 				width: 27vh;
 				height: 27vh;
 				border-radius: 50%;
-				box-shadow: 70px -35px 10px $box-shadow;
-				background-color: $primary;
+				box-shadow: -10px 18px 20px var(--ocean);
+				background-color: var(--bs-primary);
 				margin-bottom: 10px;
 				transition: 300ms;
 			}
 
 			.picture:hover {
-				box-shadow: 0px 0px 25px $box-shadow;
-				border: 3px solid $light;
+				box-shadow: 0px 0px 25px var(--shadow-rgb);
+				border: 3px solid var(--bs-light);
 
 			}
 

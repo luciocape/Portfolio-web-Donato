@@ -10,7 +10,7 @@
 			<p class="mb-1">{{ item.description }}</p>
 			<div class="d-flex flex-wrap gap-2">
 				<span v-for="(element, index) in item.tags" :key="index"
-					class="tag bg-primary bg-opacity-25 text-info rounded-5 text-nowrap">{{ element }}</span>
+					class=" tag bg-primary bg-opacity-25 text-info rounded-5 text-nowrap">{{ element }}</span>
 			</div>
 		</div>
 	</article>
@@ -54,7 +54,7 @@ const experiencies = [
 	height: 100%;
 	border: 1px solid transparent;
 	transition: 300ms;
-	box-shadow: 0px 0px 20px -5.5px $box-shadow;
+	box-shadow: 0px 0px 20px -5.5px var(--shadow-rgb);
 }
 
 .experience-container:hover {

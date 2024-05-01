@@ -8,7 +8,7 @@
 				class="form-control form-controls mb-4 rounded-0" :name="item.id" :id="item.id"
 				:placeholder="item.placeholder" />
 			<textarea v-else class="form-control form-controls mb-2 rounded-0" :name="item.id" :id="item.id"
-				:placeholder="item.placeholder" style="max-height: 120px"></textarea>
+				:placeholder="item.placeholder" style="height: 120px; resize: none;"></textarea>
 		</div>
 		<input type="submit" class="btn btn-secondary w-100 send rounded-0" style="width: 150px" />
 
@@ -46,6 +46,7 @@ const label = "Formulario";
 </script>
 
 <style scoped lang="scss">
+@import '../../assets/bootstrap-custom.scss';
 form {
 	.inputs label:nth-child(1) {
 		margin-top: 0 !important;
@@ -71,12 +72,13 @@ form {
 
 	.form-control {
 		transition: 350ms;
-		background-color: rgba(16, 85, 85, 0.295) !important;
-		border: 1px solid rgba(255, 255, 255, 0.253);
+		background-color: var(--form-input-rgb) !important;
+		border: 1px solid ;
 	}
 
 	.form-control:hover {
-		box-shadow: 0px 0px 20px -5.5px rgba(14, 67, 92, 0.8);
+		box-shadow: 0px 0px 20px -5.5px var(--shadow-rgb);
 	}
+
 }
 </style>

@@ -1,14 +1,36 @@
 
-$primary: #1ecfdb;
-$secondary: #0d6efd;
-$tertiary: #6c757d;
-$box-shadow: #107283cc;
-$bg-ocean: #060911;
-$bg-ocean-light: #0e1d47;
-$form-input: rgba(16, 85, 85, 0.295);
+//Dark mode
+$primary: #0cfff3;
+$secondary: rgb(6, 102, 190);
+$tertiary: 108, 117, 125;
+
+$box-shadow: 16, 114, 131;
+$bg-ocean: rgb(6, 9, 17);
+$bg-ocean-light: 14, 29, 71;
+$form-input: 16, 85, 85;
 
 
-// $shadows: ;
+//Light mode
+$var: rgb(5, 28, 105);
+$primar: 0, 255, 200;
+$secondar: 5, 28, 105;
+$tertiar: 168, 168, 168;
+
+$bg-ocean-day: rgb(19, 63, 119);
+$bg-ocean-day-light: 96, 196, 226;
+$form-input-day: 16, 85, 85;
+$box-shadow-day: 16, 114, 131;
+
+
+:root{
+	--bs-tertiary: rgb(#{$tertiary});
+	--bs-tertiary-rgb: #{$tertiary};
+	--ocean: #{$bg-ocean};
+	--ocean-light: rgb(#{$bg-ocean-light});
+	--ocean-light-rgb: rgba(#{$bg-ocean-light}, 0.85);
+	--shadow-rgb: rgba(#{$box-shadow}, 0.8);
+	--form-input-rgb: rgb(#{$form-input}, 0.295);
+}
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 // @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Onest:wght@100..900&display=swap');
@@ -18,37 +40,37 @@ $form-input: rgba(16, 85, 85, 0.295);
 // @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Onest:wght@100..900&family=Patua+One&family=Rampart+One&family=Russo+One&family=Saira+Stencil+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
-
-
-
 *{
 	box-sizing: border-box;
 }
 body {
-	background: radial-gradient(ellipse 90% 90% at 50% 0%,#0e1d47, #060911);
+	background: radial-gradient(ellipse 90% 90% at 50% 0%,var(--ocean-light), var(--ocean));
 	background-repeat: no-repeat;
 	font-family: "Krona one";
 	font-optical-sizing: auto;
 	font-weight: 100;
 	font-style: normal;
+	h1,h2{
+		text-shadow: -10px 5px 10px var(--ocean);
+	}
 	h1 {
-		color: $primary;
+		color: var(--bs-primary);
 		font-size: 2.2rem;
 	}
 	h2 {
-		color: $secondary;
+		color: var(--bs-secondary);
 		font-size: 1.5rem;
 	}
 	h3 {
-		color: $light;
+		color: var(--bs-light);
 		font-size: 1rem;
 	}
 	p {
-		color: $tertiary;
+		color: var(--bs-tertiary);
 		font-size: 0.8rem;
 	}
 	a {
-		color: $secondary;
+		color: var(--bs-secondary);
 		text-decoration: none;
 	}
 	ul,
@@ -60,24 +82,21 @@ body {
 		font-size: 1.1rem;
 	}
 	.form-control {
-		color: #b1bdc9f3 !important;
+		color: $gray-400 !important;
 	}
 	.form-control::placeholder{
-		color: #b1bdc988!important;
+		color: var(--bs-tertiary)!important;
 	}
-
-
 }
 .border-tertiary {
-	border-color: $tertiary;
+	border-color: var(--bs-tertiary);
 }
 .bg-tertiary {
-	background-color: $tertiary !important;
+	background-color: rgba(var(--bs-tertiary-rgb),var(--bs-bg-opacity)) !important;
 }
 .text-tertiary {
 	color: $tertiary;
 }
-
 //animationes
 .item-blur {
 	view-timeline-name: --item;
@@ -90,9 +109,11 @@ body {
 }
 @keyframes blur {
     0%{
+		backdrop-filter: blur(0);
     }
     100%{
-		background-color: rgba(4, 21, 63, 0.753);
+		background-color: var(--ocean-light-rgb);
+		
 		backdrop-filter: blur(30px);
     }
 }
@@ -139,4 +160,20 @@ body {
 	html {
 		font-size: 10.1px;
 	}
+}
+
+@include color-mode(dark) {
+
+	--bs-primary: rgb(#{$primar});
+	--bs-primary-rgb: #{$primar};
+	--bs-secondary: rgb(#{$secondar}); 
+	--bs-secondary-rgb: #{$secondar};
+	--bs-tertiary: rgb(#{$tertiar});
+	--bs-tertiary-rgb: #{$tertiar};
+
+	--ocean: #{$bg-ocean-day};
+	--ocean-light: rgb(#{$bg-ocean-day-light});
+	--ocean-light-rgb: rgba(#{$bg-ocean-day-light},0.8);
+	--shadow-rgb: rgba(#{$box-shadow-day}, 0.8);
+	--form-input-rgb: rgb(#{$form-input-day}, 0.295);
 }
