@@ -21,7 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
   padding: 0;
   // background: #08bada4b;
   overflow: hidden;
-  
+
   li {
 
     border-radius: 47% 53% 46% 45%;
@@ -31,13 +31,12 @@ import { RouterLink, RouterView } from 'vue-router'
     bottom: -184px;
     animation: animate 5s linear infinite;
 
-    div{
+    div {
       border: 1px solid rgba(131, 247, 255, 0.342);
       border-radius: 47% 53% 46% 45%;
-      box-shadow: -7px -8px 15px -15px #50f3ff;
+      box-shadow: -7px -8px 15px -15px var(--bs-primary);
     }
 
   }
 }
-
 </style>

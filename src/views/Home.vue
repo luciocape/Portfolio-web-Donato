@@ -12,7 +12,7 @@
 		<main class="ms-3">
 			<section v-for="(item, index) in sections" :key="index" :id="index" class="h-auto">
 				<h2>{{ item.title }}</h2>
-				<div class="border-start border-2 border-tertiary section-body mt-1" :class="item.clase">
+				<div class="border-start border-2 border-light-subtle section-body mt-1" :class="item.clase">
 					<Experience v-if="item.title == 'EXPERIENCIA'"></Experience>
 					<galery v-else-if="item.title == 'GALERIA'"></galery>
 					<about v-else-if="item.title == 'SOBRE MI'"></about>
@@ -86,7 +86,7 @@ main {
 		min-height: 100vh;
 
 		h2 {
-			text-shadow: 1px 3px 7px $secondary;
+			text-shadow: 1px 2px 5px rgba(var(--bs-secondary-rgb), 0.8);
 		}
 		.section-body:nth-child(n) {
 			padding-left: 4%;
