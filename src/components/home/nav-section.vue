@@ -3,8 +3,9 @@
 		<ul>
 			<li v-for="(item, index) in nav" :key="index" class="mb-3">
 				<a :href="'#' + index" class="d-flex align-items-center w-75 nav-item"><span
-						class="nav-line bg-light-subtle me-2" :class="{ active: activeSection === index }"></span>{{ item
-					}}</a>
+						class="nav-line bg-light-subtle me-2" :class="{ active: activeSection === index }"></span>{{
+		item
+	}}</a>
 			</li>
 		</ul>
 	</nav>
@@ -80,7 +81,7 @@ onUnmounted(() => {
 
 </script>
 
-<style lang="scss" scoped >
+<style lang="scss" scoped>
 @import '../../assets/bootstrap-custom.scss';
 
 .nav-line {
@@ -96,6 +97,9 @@ a:hover .nav-line,
 	height: 2px;
 }
 
+a{
+	text-shadow: $shadow-ocean;
+}
 
 
 @media only screen and (max-width: 849px) {
@@ -104,19 +108,10 @@ a:hover .nav-line,
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		ul{
+
+		ul {
 			width: 95%;
 		}
-	}
-
-	.moon {
-		cursor: pointer;
-	}
-
-	.moon:hover,
-	.moon:hover svg {
-		color: rgb(190, 198, 206);
-		scale: 1.08;
 	}
 
 	.nav-line {
