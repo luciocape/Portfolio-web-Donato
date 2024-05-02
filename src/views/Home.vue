@@ -85,9 +85,7 @@ main {
 		padding-top: 5vh;
 		min-height: 100vh;
 
-		h2 {
-			text-shadow: 1px 2px 5px rgba(var(--bs-secondary-rgb), 0.8);
-		}
+
 		.section-body:nth-child(n) {
 			padding-left: 4%;
 			padding-top: 10px;

@@ -11,9 +11,9 @@ $form-input: 16, 85, 85;
 
 
 //Light mode
-$var: rgb(5, 28, 105);
+$var: rgb(4, 22, 83);
 $primar: 0, 255, 200;
-$secondar: 5, 28, 105;
+$secondar: 4, 22, 83;
 $tertiar: 168, 168, 168;
 
 $bg-ocean-day: rgb(19, 63, 119);
@@ -26,11 +26,13 @@ $box-shadow-day: 16, 114, 131;
 	--bs-tertiary: rgb(#{$tertiary});
 	--bs-tertiary-rgb: #{$tertiary};
 	--ocean: #{$bg-ocean};
+
 	--ocean-light: rgb(#{$bg-ocean-light});
 	--ocean-light-rgb: rgba(#{$bg-ocean-light}, 0.85);
 	--shadow-rgb: rgba(#{$box-shadow}, 0.8);
 	--form-input-rgb: rgb(#{$form-input}, 0.295);
 }
+$shadow-ocean: -5px 10px 8px var(--ocean);
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 // @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Onest:wght@100..900&display=swap');
@@ -51,7 +53,7 @@ body {
 	font-weight: 100;
 	font-style: normal;
 	h1,h2{
-		text-shadow: -10px 5px 10px var(--ocean);
+		text-shadow: $shadow-ocean;
 	}
 	h1 {
 		color: var(--bs-primary);
@@ -86,6 +88,15 @@ body {
 	}
 	.form-control::placeholder{
 		color: var(--bs-tertiary)!important;
+	}
+	.moon {
+		cursor: pointer;
+	}
+
+	.moon:hover,
+	.moon:hover svg {
+		color: rgb(190, 198, 206);
+		scale: 1.08;
 	}
 }
 .border-tertiary {
