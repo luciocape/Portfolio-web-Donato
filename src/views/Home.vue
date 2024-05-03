@@ -12,7 +12,7 @@
 		<main class="ms-3">
 			<section v-for="(item, index) in sections" :key="index" :id="index" class="h-auto">
 				<h2>{{ item.title }}</h2>
-				<div class="border-start border-2 border-light-subtle section-body mt-1" :class="item.clase">
+				<div class="border-start border-2 border-light border-opacity-75 section-body mt-1" :class="item.clase">
 					<Experience v-if="item.title == 'EXPERIENCIA'"></Experience>
 					<galery v-else-if="item.title == 'GALERIA'"></galery>
 					<about v-else-if="item.title == 'SOBRE MI'"></about>

@@ -3,7 +3,7 @@
 		<ul>
 			<li v-for="(item, index) in nav" :key="index" class="mb-3">
 				<a :href="'#' + index" class="d-flex align-items-center w-75 nav-item"><span
-						class="nav-line bg-light-subtle me-2" :class="{ active: activeSection === index }"></span>{{
+						class="nav-line bg-light bg-opacity-75 me-2" :class="{ active: activeSection === index }"></span>{{
 		item
 	}}</a>
 			</li>
