@@ -1,23 +1,22 @@
 
-//Dark mode
-$primary: #0cfff3;
-$secondary: rgb(6, 102, 190);
-$tertiary: 108, 117, 125;
-
-$box-shadow: 16, 114, 131;
-$bg-ocean: rgb(6, 9, 17);
-$bg-ocean-light: 14, 29, 71;
-$form-input: 16, 85, 85;
-
-
 //Light mode
-$var: rgb(4, 22, 83);
-$primar: 0, 255, 200;
-$secondar: 4, 22, 83;
-$tertiar: 168, 168, 168;
+$primary: rgb(0, 255, 200);
+$secondary: rgb(4, 22, 83);
+$tertiary: 168, 168, 168;
 
-$bg-ocean-day: rgb(19, 63, 119);
-$bg-ocean-day-light: 96, 196, 226;
+$bg-ocean: rgb(19, 63, 119);
+$bg-ocean-light: 96, 196, 226;
+$form-input: 16, 85, 85;
+$box-shadow: 16, 114, 131;
+
+//Dark mode
+$var: rgb(4, 22, 83);
+$primar: 12, 255, 243;
+$secondar: 6, 102, 190;
+$tertiar: 108, 117, 125;
+
+$bg-ocean-day: rgb(6, 9, 17);
+$bg-ocean-day-light: 14, 29, 71;
 $form-input-day: 16, 85, 85;
 $box-shadow-day: 16, 114, 131;
 

@@ -7,8 +7,6 @@
 (() => {
     'use strict'
 
-    let modeActive = 'light'
-
     const getStoredTheme = () => localStorage.getItem('theme')
     
     const setStoredTheme = theme =>{
@@ -27,16 +25,13 @@
     const setTheme = theme => {
         if (theme === 'auto') {
             document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
-            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
         } else {
             document.documentElement.setAttribute('data-bs-theme', theme)
             
         }
-        modeActive = theme
     }
 
     setTheme(getPreferredTheme())
-    console.log(modeActive)
     
     window.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-bs-theme-value]')
