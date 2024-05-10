@@ -1,7 +1,8 @@
 <template>
     <div class="container-xxl conteiner-footer">
         <footer class="d-flex flex-wrap justify-content-around align-items-center py-3 my-4 border-top text-light">
-            <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
+            <p>Diseñado y desarrollado por <a href="https://www.linkedin.com/in/lucio-capezzuto" class="btn-link">Lucio Capezzuto</a></p>
+            
             <a href="#header" class="button-up rounded-3 text-light">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                     class="bi bi-arrow-up-square" viewBox="0 0 16 16">
@@ -20,15 +21,17 @@ name: "Footer";
 </script>
 
 <style lang="scss" scoped>
-.conteiner-footer{
+.conteiner-footer {
     margin-top: 15vh;
 }
+
 .button-up {
     transition: 100ms;
 }
+
 .button-up:hover {
     transform: translateY(-3px);
-    color: rgba(var(--bs-primary-rgb), 0.7)!important; 
-    background-color: rgb(var(--bs-secondary-rgb),0.6);
+    color: rgba(var(--bs-primary-rgb), 0.7) !important;
+    background-color: rgb(var(--bs-secondary-rgb), 0.6);
 }
 </style>

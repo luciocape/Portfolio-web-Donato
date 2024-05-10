@@ -50,7 +50,7 @@ const experiencies = [
 <style scoped lang="scss">
 @import '../../assets/bootstrap-custom.scss';
 .experience-container {
-	background-color: rgba(var(--ocean-rgb),0.4);
+	background-color: rgba(var(--ocean-rgb),0.5);
 	height: 100%;
 	border: 1px solid transparent;
 	box-shadow: 0px 0px 20px -5.5px var(--shadow-rgb);

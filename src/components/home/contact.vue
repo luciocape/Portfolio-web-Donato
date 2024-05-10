@@ -1,5 +1,5 @@
 <template>
-	<form action="" method="POST" class="d-flex flex-column justify-content-center">
+	<form action="https://formsubmit.co/doninfantino@gmail.com" method="POST" class="d-flex flex-column justify-content-center">
 		<div v-for="(item, index) in inputs" :key="index" class="inputs">
 			<label :for="item.for" class="form-label text-info lead">{{
 			item.label
@@ -12,7 +12,7 @@
 		</div>
 		<input type="submit" class="btn btn-secondary w-100 send rounded-0" style="width: 150px" />
 
-		<input type="hidden" name="_next" value="" />
+		<input type="hidden" name="_next" value="https://donatoinfantino.netlify.app/" />
 	</form>
 </template>
 <script setup>
