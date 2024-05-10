@@ -1,5 +1,5 @@
 <template>
-	<div class="ms-2 position-relative contenedor-header">
+	<div id="header" class="ms-2 position-relative contenedor-header">
 		<header class="position-sticky">
 			<navSection v-if="screenSize < 850"></navSection>
 			<section>
