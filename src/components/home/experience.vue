@@ -10,7 +10,7 @@
 			<p class="mb-1">{{ item.description }}</p>
 			<div class="d-flex flex-wrap gap-2">
 				<span v-for="(element, index) in item.tags" :key="index"
-					class=" tag bg-primary bg-opacity-25 text-info rounded-5 text-nowrap">{{ element }}</span>
+					class=" tag bg-secondary bg-opacity-50 text-primary rounded-5 text-nowrap">{{ element }}</span>
 			</div>
 		</div>
 	</article>
@@ -50,17 +50,17 @@ const experiencies = [
 <style scoped lang="scss">
 @import '../../assets/bootstrap-custom.scss';
 .experience-container {
-	background-color: #0b0f1ebd;
+	background-color: rgba(var(--ocean-rgb),0.4);
 	height: 100%;
 	border: 1px solid transparent;
-	transition: 300ms;
 	box-shadow: 0px 0px 20px -5.5px var(--shadow-rgb);
+	transition: 350ms;
 }
 
 .experience-container:hover {
-	background-color: #15224eab;
-	border-top: 1px solid rgba(245, 245, 245, 0.158);
-	box-shadow: none;
+	background-color: #29408bab;
+	border-top: 1px solid rgba(255, 255, 255, 0.315);
+	box-shadow: 2px 2px 10px -3px rgba(0, 0, 0, 0.39), -2px 2px 10px -3px rgba(0, 0, 0, 0.397);
 
 	// --bs-bg-opacity: .01;
 }

@@ -21,6 +21,7 @@
 			</section>
 		</main>
 	</div>
+	<Footer></Footer>
 </template>
 
 <script setup>
@@ -29,10 +30,11 @@ import galery from "../components/home/galery.vue";
 import about from "../components/home/about.vue";
 import contact from "../components/home/contact.vue";
 import Header from "../components/header.vue";
+import Footer from "../components/footer.vue";
 import { ref, onMounted, onUnmounted } from 'vue';
 name: "home";
 components: {
-	Experience, galery, about, contact, Header;
+	Experience, galery, about, contact, Header, Footer;
 }
 const sections = [
 	{
@@ -82,8 +84,9 @@ main {
 	width: 55%;
 
 	section {
-		padding-top: 5vh;
-		min-height: 100vh;
+		padding-top: 11vh;
+		min-height: 80vh;
+		margin-bottom: 10vh;
 
 
 		.section-body:nth-child(n) {
@@ -98,9 +101,6 @@ main {
 }
 
 @media only screen and (max-width: 849px) {
-	section{
-		padding-top: 6rem !important;
-	}
 	.contain-all {
 		display: block !important;
 		max-width: 75%;
@@ -117,7 +117,7 @@ main {
 @media only screen and (max-width: 400px) {
 
 	.section-body:nth-child(n) {
-		border-top: 2px solid $tertiary;
+		border-top: 2px solid $light;
 		border-left: 0px !important;
 		padding-left: 0px !important;
 	}

@@ -2,20 +2,21 @@
 //Light mode
 $primary: rgb(0, 255, 200);
 $secondary: rgb(4, 22, 83);
-$tertiary: 168, 168, 168;
+$tertiary: 210, 210, 210;
 
-$bg-ocean: rgb(19, 63, 119);
+$bg-ocean: 21, 71, 136;
 $bg-ocean-light: 96, 196, 226;
 $form-input: 16, 85, 85;
-$box-shadow: 16, 114, 131;
+$box-shadow: 3, 56, 36;
+
 
 //Dark mode
-$var: rgb(4, 22, 83);
+$var: rgb(3, 56, 36);
 $primar: 12, 255, 243;
 $secondar: 6, 102, 190;
-$tertiar: 108, 117, 125;
+$tertiar: 168, 168, 168;
 
-$bg-ocean-day: rgb(6, 9, 17);
+$bg-ocean-day: 6, 9, 17;
 $bg-ocean-day-light: 14, 29, 71;
 $form-input-day: 16, 85, 85;
 $box-shadow-day: 16, 114, 131;
@@ -24,10 +25,11 @@ $box-shadow-day: 16, 114, 131;
 :root{
 	--bs-tertiary: rgb(#{$tertiary});
 	--bs-tertiary-rgb: #{$tertiary};
-	--ocean: #{$bg-ocean};
+	--ocean: rgb(#{$bg-ocean});
+	--ocean-rgb: #{$bg-ocean};
 
 	--ocean-light: rgb(#{$bg-ocean-light});
-	--ocean-light-rgb: rgba(#{$bg-ocean-light}, 0.85);
+	--ocean-light-rgb: #{$bg-ocean-light};
 	--shadow-rgb: rgba(#{$box-shadow}, 0.8);
 	--form-input-rgb: rgb(#{$form-input}, 0.295);
 }
@@ -122,7 +124,7 @@ body {
 		backdrop-filter: blur(0);
     }
     100%{
-		background-color: var(--ocean-light-rgb);
+		background-color: rgba(var(--ocean-light-rgb),0.8);
 		
 		backdrop-filter: blur(30px);
     }
@@ -178,12 +180,23 @@ body {
 	--bs-primary-rgb: #{$primar};
 	--bs-secondary: rgb(#{$secondar}); 
 	--bs-secondary-rgb: #{$secondar};
+	--bs-btn-bg: rgb(#{$secondar})!important;
 	--bs-tertiary: rgb(#{$tertiar});
 	--bs-tertiary-rgb: #{$tertiar};
 
-	--ocean: #{$bg-ocean-day};
+	--ocean: rgb(#{$bg-ocean-day});
+	--ocean-rgb: #{$bg-ocean-day};
 	--ocean-light: rgb(#{$bg-ocean-day-light});
-	--ocean-light-rgb: rgba(#{$bg-ocean-day-light},0.8);
+	--ocean-light-rgb: #{$bg-ocean-day-light};
 	--shadow-rgb: rgba(#{$box-shadow-day}, 0.8);
 	--form-input-rgb: rgb(#{$form-input-day}, 0.295);
+
+	h3 {
+		color: var(--bs-light);
+	}
+	.btn-secondary{
+		--bs-btn-bg: rgb(#{$secondar});
+		--bs-btn-border-color: rgb(#{$secondar});
+		--bs-btn-hover-border-color: rgb(#{$secondar});
+	}
 }
