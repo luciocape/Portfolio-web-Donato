@@ -53,7 +53,7 @@ const experiencies = [
 	background-color: rgba(var(--ocean-rgb),0.5);
 	height: 100%;
 	border: 1px solid transparent;
-	box-shadow: 0px 0px 20px -5.5px var(--shadow-rgb);
+	box-shadow: 0px 0px 20px -2px var(--shadow-rgb);
 	transition: 350ms;
 }
 

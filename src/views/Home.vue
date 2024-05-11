@@ -10,13 +10,17 @@
 		<Header></Header>
 
 		<main class="ms-3">
-			<section v-for="(item, index) in sections" :key="index" :id="index" class="h-auto">
+			<section v-for="(item, index) in sections" :key="index" :id="'section' + index" class="h-auto">
 				<h2>{{ item.title }}</h2>
 				<div class="border-start border-2 border-light border-opacity-75 section-body mt-1" :class="item.clase">
 					<Experience v-if="item.title == 'EXPERIENCIA'"></Experience>
-					<galery v-else-if="item.title == 'GALERIA'"></galery>
-					<about v-else-if="item.title == 'SOBRE MI'"></about>
-					<contact v-else-if="item.title == 'CONTACTO'"></contact>
+					<a href="" v-if="item.title == 'EXPERIENCIA'" class="ver-mas btn btn-outline-primary mt-2 p-3">Ver
+						más</a>
+					<galery v-if="item.title == 'GALERIA'"></galery>
+					<a href="" v-if="item.title == 'GALERIA'" class="ver-mas btn btn-outline-primary mt-2 p-3 ">Ver
+						más</a>
+					<about v-if="item.title == 'SOBRE MI'"></about>
+					<contact v-if="item.title == 'CONTACTO'"></contact>
 				</div>
 			</section>
 		</main>
@@ -51,7 +55,7 @@ const sections = [
 	},
 	{
 		title: "CONTACTO",
-		clase: "mb-5",
+		clase: "",
 	},
 ];
 let randomNumbers = [];
@@ -83,22 +87,32 @@ onUnmounted(() => {
 main {
 	width: 55%;
 
+	#section3 {
+		margin-bottom: 0;
+	}
+
 	section {
 		padding-top: 11vh;
 		min-height: 80vh;
-		margin-bottom: 10vh;
+		margin-bottom: 9vh;
 
 
 		.section-body:nth-child(n) {
 			padding-left: 4%;
 			padding-top: 10px;
 		}
+
 		.section-body {
 			min-height: 70vh;
 			width: auto;
+			.ver-mas {
+				box-shadow: inset 0 0 20px 2px $info;
+			}
 		}
 	}
 }
+
+
 
 @media only screen and (max-width: 849px) {
 	.contain-all {
