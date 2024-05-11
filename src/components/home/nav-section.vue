@@ -13,7 +13,7 @@
 	<nav class="mt-3 position-fixed top-0 start-0    w-100" v-if="screenSize < 850">
 		<ul class="d-flex justify-content-around align-items-center m-0 p-3 rounded-5 item-blur">
 			<li v-for="(item, index) in nav" :key="index" class="">
-				<a :href="'#' + index" class="d-flex flex-column-reverse align-items-start nav-item"><span
+				<a :href="'#' + 'section' + index" class="d-flex flex-column-reverse align-items-start nav-item"><span
 						class="nav-line bg-tertiary me-2" :class="{ active: activeSection === index }"></span>{{ item
 					}}</a>
 			</li>
@@ -47,7 +47,7 @@ const nav = ref(["EXPERIENCIA", "GALERIA", "SOBRE MI", "CONTACTO"]);
 const activeSection = ref(-1)
 const checkScroll = () => {
 	for (let i = 0; i < nav.value.length; i++) {
-		const section = document.getElementById(i);
+		const section = document.getElementById('section' + i);
 		const rect = section.getBoundingClientRect();
 		if (rect.top <= 120 && rect.bottom >= 120) {
 			activeSection.value = i;
