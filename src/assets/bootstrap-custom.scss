@@ -47,6 +47,8 @@ $shadow-ocean: -5px 10px 8px var(--ocean);
 	box-sizing: border-box;
 }
 body {
+	min-height: 100vh;
+	max-width: 100vw;
 	background: radial-gradient(ellipse 90% 90% at 50% 0%,var(--ocean-light), var(--ocean));
 	background-repeat: no-repeat;
 	font-family: "Krona one";
@@ -67,6 +69,14 @@ body {
 	h3 {
 		color: var(--bs-light);
 		font-size: 1rem;
+	}
+	h5{
+		font-size: 1.1rem;
+	}
+	nav{
+		min-width: 95%;
+		z-index: 500;
+		left: 2.5%;
 	}
 	p {
 		color: var(--bs-tertiary);
@@ -100,6 +110,7 @@ body {
 		scale: 1.08;
 	}
 }
+
 .border-tertiary {
 	border-color: var(--bs-tertiary);
 }
@@ -170,7 +181,7 @@ body {
 }
 @media only screen and (max-width: 530px) {
 	html {
-		font-size: 10.1px;
+		font-size: 11px;
 	}
 }
 

@@ -14,10 +14,10 @@
 				<h2>{{ item.title }}</h2>
 				<div class="border-start border-2 border-light border-opacity-75 section-body mt-1" :class="item.clase">
 					<Experience v-if="item.title == 'EXPERIENCIA'"></Experience>
-					<a href="" v-if="item.title == 'EXPERIENCIA'" class="ver-mas btn btn-outline-primary mt-2 p-3">Ver
+					<a href="" v-if="item.title == 'EXPERIENCIA'" class="ver-mas btn btn-outline-primary mt-2 p-3 lead">Ver
 						más</a>
 					<galery v-if="item.title == 'GALERIA'"></galery>
-					<a href="" v-if="item.title == 'GALERIA'" class="ver-mas btn btn-outline-primary mt-2 p-3 ">Ver
+					<a href="" v-if="item.title == 'GALERIA'" class="ver-mas btn btn-outline-primary mt-2 p-3 lead">Ver
 						más</a>
 					<about v-if="item.title == 'SOBRE MI'"></about>
 					<contact v-if="item.title == 'CONTACTO'"></contact>

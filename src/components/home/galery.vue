@@ -3,11 +3,16 @@
         <div class="w-100 d-flex justify-content-start flex-column flex-lg-row lex-nowrap gap-2">
             <article v-for="item in videos"
                 class="container contendor-proyect d-flex flex-nowrap justify-content-center m-0 p-0">
-                <input type="radio" name="slide" :id="item.id" :checked="item.state" class="d-none" />
-                <label :for="item.id"
-                    class="card rounded-5 overflow-hidden align-items-start justify-content-end p-2 pb-0">
-                    <div class="rowl d-flex flex-nowrap text-body align-items-center justify-content-start gap-2">
-                        <div class="icon d-flex align-items-center justify-content-center bg-secondary rounded-5">
+                <input type="radio" name="slide" :id="'v' + item.id" :checked="item.state" class="d-none" />
+                <label :for="'v' + item.id"
+                    class="card bg-black rounded-5 overflow-hidden align-items-start justify-content-end p-2 pb-0">
+                    <video :src="item.url" autoplay muted playsinline loop class="position-absolute"></video>
+                    <div class="filtro bg-black bg-opacity-50 position-absolute"
+                        style="height: 100%; width: 100%; z-index: 50;"></div>
+                    <div class="rowl d-flex flex-nowrap text-body align-items-center justify-content-start gap-2"
+                        style="z-index: 100;">
+                        <div
+                            class="icon d-flex align-items-center justify-content-center bg-secondary text-light rounded-5">
                             {{ item.id }}
                         </div>
                         <div class="description d-flex flex-column justify-content-center overflow-hidden">
@@ -25,32 +30,25 @@
 name: "galery";
 const videos = [
     {
-        id: "v1",
+        id: "1",
         state: true,
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
-        url: "",
+        url: "../../../contenido/estilo-avanzado.mp4",
     },
     {
-        id: "v2",
+        id: "2",
         state: false,
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
-        url: "",
+        url: "../../../public/contenido/estilo-medio-avanzado-emi.mp4",
     },
     {
-        id: "v3",
+        id: "3",
         state: false,
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
-        url: "",
-    },
-    {
-        id: "v4",
-        state: false,
-        title: "video 1",
-        description: "lorem ipsum dolor sit amet",
-        url: "",
+        url: "../../../public/contenido/hormozi.mp4",
     },
 ];
 </script>
@@ -85,11 +83,23 @@ const videos = [
     width: auto;
 }
 
+video {
+    top: 0;
+    align-self: center;
+    min-height: 290px;
+    height: 110%;
+}
+
 .card {
     width: 70px;
     transition: .6s cubic-bezier(.28, -0.03, 0, .99);
     box-shadow: 0px 10px 30px -5px var(--shadow-rgb);
     cursor: pointer;
+}
+
+.filtro {
+    align-self: center;
+    justify-self: center;
 }
 
 .icon {
@@ -116,7 +126,7 @@ const videos = [
 }
 
 .card:hover {
-    scale: 1.05;
+    scale: 1.03;
 }
 
 input:checked+.card:hover {
@@ -127,7 +137,7 @@ input:checked+label {
     width: 275px;
 }
 
-input:checked .rowl {
+input:checked  .rowl {
     width: 100%;
 }
 

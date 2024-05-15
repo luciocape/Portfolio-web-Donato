@@ -42,8 +42,6 @@ const experiencies = [
 			"lorem ipsum dolor sit amet, consectetur adipiscing el aspect ratio nisl con et et dolor in eget et dolore magna al e fits",
 		tags: ["Midjourney", "Canva", "Premier pro"],
 	},
-
-
 ];
 </script>
 

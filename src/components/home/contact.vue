@@ -5,12 +5,12 @@
 			item.label
 		}}</label>
 			<input v-if="item.id != 'message'" :autocomplete="item.autocomplete" :type="item.type"
-				class="form-control form-controls mb-4 rounded-0" :name="item.id" :id="item.id"
+				class="form-control form-controls mb-4 rounded-0 lead" :name="item.id" :id="item.id"
 				:placeholder="item.placeholder" />
-			<textarea v-else class="form-control form-controls mb-2 rounded-0" :name="item.id" :id="item.id"
+			<textarea v-else class="form-control form-controls mb-2 rounded-0 lead" :name="item.id" :id="item.id"
 				:placeholder="item.placeholder" style="height: 120px; resize: none;"></textarea>
 		</div>
-		<input type="submit" class="btn btn-secondary w-100 send rounded-0" style="width: 150px" />
+		<input type="submit" class="btn btn-secondary w-100 send rounded-0 lead" style="width: 150px" />
 
 		<input type="hidden" name="_next" value="https://donatoinfantino.netlify.app/" />
 	</form>
