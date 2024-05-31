@@ -16,7 +16,7 @@
                             {{ item.id }}
                         </div>
                         <div class="description d-flex flex-column justify-content-center overflow-hidden">
-                            <h4 class="text-uppercase mb-0">{{ item.title }}</h4>
+                            <h3 class="text-uppercase mb-0">{{ item.title }}</h3>
                             <p class="pt-1 mb-0">{{ item.description }}</p>
                         </div>
                     </div>
@@ -36,19 +36,13 @@ const videos = [
         description: "lorem ipsum dolor sit amet",
         url: "../../../contenido/estilo-avanzado.mp4",
     },
+
     {
         id: "2",
         state: false,
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
-        url: "../../../public/contenido/estilo-medio-avanzado-emi.mp4",
-    },
-    {
-        id: "3",
-        state: false,
-        title: "video 1",
-        description: "lorem ipsum dolor sit amet",
-        url: "../../../public/contenido/hormozi.mp4",
+        url: "../../../contenido/hormozi.mp4",
     },
 ];
 </script>

@@ -128,7 +128,7 @@ main {
 	}
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 550px) {
 
 	.section-body:nth-child(n) {
 		border-top: 2px solid $light;
