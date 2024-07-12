@@ -47,7 +47,6 @@ const label = "Formulario";
 
 <style scoped lang="scss">
 @import '../../assets/bootstrap-custom.scss';
-
 form {
 	.inputs label:nth-child(1) {
 		margin-top: 0 !important;
