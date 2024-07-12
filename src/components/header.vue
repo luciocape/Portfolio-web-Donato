@@ -3,7 +3,7 @@
 		<header class="position-sticky">
 			<navSection v-if="screenSize < 850"></navSection>
 			<section>
-				<div class="picture overflow-hidden d-flex justify-content-center align-items-center"><img src="../../contenido/perfil_img.webp" alt="Donato Infantino" class="w-100 p-1 rounded-circle"></div>
+				<div class="picture overflow-hidden d-flex justify-content-center align-items-center"><img src="../../public/contenido/perfil_img.webp" alt="Donato Infantino" class="w-100 p-1 rounded-circle"></div>
 				<h1 class="mb-3">{{ name }}</h1>
 				<h2>{{ $t( "Job" ) }}</h2>
 				<div class="mt-3 mb-5 d-flex align-items-center gap-3">
