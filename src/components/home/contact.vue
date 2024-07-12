@@ -1,18 +1,19 @@
 <template>
-	<form action="https://formsubmit.co/doninfantino@gmail.com" method="POST" class="d-flex flex-column justify-content-center">
+	<form action="https://formsubmit.co/doninfantino@gmail.com" method="POST"
+		class="d-flex flex-column justify-content-center">
 		<div v-for="(item, index) in inputs" :key="index" class="inputs">
-			<label :for="item.for" class="form-label text-info lead">{{
-			item.label
-		}}</label>
+			<label :for="item.for" class="form-label text-info lead">
+				{{ $t("Contact." + item.label + ".label") }}
+			</label>
 			<input v-if="item.id != 'message'" :autocomplete="item.autocomplete" :type="item.type"
 				class="form-control form-controls mb-4 rounded-0 lead" :name="item.id" :id="item.id"
 				:placeholder="item.placeholder" />
 			<textarea v-else class="form-control form-controls mb-2 rounded-0 lead" :name="item.id" :id="item.id"
-				:placeholder="item.placeholder" style="height: 120px; resize: none;"></textarea>
+				:placeholder="$t('Contact.' + item.label + '.placeholder')" style="height: 120px; resize: none;"></textarea>
 		</div>
-		<input type="submit" class="btn btn-secondary w-100 send rounded-0 lead" style="width: 150px" />
+		<input type="submit" :value="$t('Contact.send')" class="btn btn-secondary w-100 send rounded-0 lead" style="width: 150px"/>
 
-		<input type="hidden" name="_next" value="https://donatoinfantino.netlify.app/" />
+		<input type="hidden" name="_next" value="https://donatoinfantino.com/" />
 	</form>
 </template>
 <script setup>
@@ -23,7 +24,7 @@ const inputs = [
 		autocomplete: 'given-name',
 		for: "name",
 		placeholder: "Juan Perez",
-		label: "Tu nombre",
+		label: "input1",
 		type: "text",
 	},
 	{
@@ -31,15 +32,14 @@ const inputs = [
 		autocomplete: "family-name",
 		for: "email",
 		placeholder: "juanperez@gmail.com",
-		label: "Tu correo electronico",
+		label: "input2",
 		type: "email",
 	},
 	{
 		id: "message",
 		autocomplete: "off",
 		for: "message",
-		placeholder: "Hola, me gustaria saber...",
-		label: "Tu mensaje",
+		label: "input3",
 	},
 ];
 const label = "Formulario";
@@ -47,6 +47,7 @@ const label = "Formulario";
 
 <style scoped lang="scss">
 @import '../../assets/bootstrap-custom.scss';
+
 form {
 	.inputs label:nth-child(1) {
 		margin-top: 0 !important;
@@ -73,7 +74,7 @@ form {
 	.form-control {
 		transition: 350ms;
 		background-color: var(--form-input-rgb) !important;
-		border: 1px solid ;
+		border: 1px solid;
 	}
 
 	.form-control:hover {

@@ -2,11 +2,9 @@
 	<nav class="mt-2" v-if="screenSize >= 850">
 		<ul>
 			<li v-for="(item, index) in nav" :key="index" class="mb-3">
-				<a :href="'#' + 'section' + index" class="d-flex align-items-center w-75 nav-item"><span
-						class="nav-line bg-light bg-opacity-75 me-2"
-						:class="{ active: activeSection === index }"></span>{{
-		item
-	}}</a>
+				<a :href="'#' + 'section' + index" class="d-flex align-items-center w-75 nav-item">
+					<span class="nav-line bg-light bg-opacity-75 me-2" :class="{ active: activeSection === index }">
+					</span>{{ $t(item + ".title") }}</a>
 			</li>
 		</ul>
 	</nav>
@@ -15,7 +13,7 @@
 		<button class="navbar-toggler bg-light-subtle bg-opacity-10 ms-3" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarsExample03" aria-controls="navbarsExample01" aria-expanded="false"
 			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon "></span>
+			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarsExample03">
 			<ul class="navbar-nav d-flex justify-content-around align-items-center gap-3 m-0 m-auto">
@@ -23,8 +21,9 @@
 				<li v-for="(item, index) in nav" :key="index" class="">
 					<a :href="'#' + 'section' + index"
 						class="d-flex flex-column-reverse align-items-start text-nowrap h5 m-0 text-secondary"><span
-							class="nav-line bg-tertiary" :class="{ active: activeSection === index }"></span>{{ item
-						}}</a>
+							class="nav-line bg-tertiary" :class="{ active: activeSection === index }"></span>
+						{{ $t(item + ".title") }}
+					</a>
 				</li>
 			</ul>
 
@@ -64,7 +63,7 @@ name: 'navSection';
 components: {
 	langSelector;
 }
-const nav = ref(["EXPERIENCIA", "GALERIA", "SOBRE MI", "CONTACTO"]);
+const nav = ref(["Experience", "Galery", "About", "Contact"]);
 const activeSection = ref(-1)
 const checkScroll = () => {
 	for (let i = 0; i < nav.value.length; i++) {

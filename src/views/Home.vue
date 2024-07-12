@@ -11,16 +11,13 @@
 
 		<main class="ms-3">
 			<section v-for="(item, index) in sections" :key="index" :id="'section' + index" class="h-auto">
-				<h2>{{ item.title }}</h2>
+				<h2>{{ $t(item.title + ".title") }}</h2>
 				<div class="border-start border-2 border-light border-opacity-75 section-body mt-1" :class="item.clase">
-					<Experience v-if="item.title == 'EXPERIENCIA'"></Experience>
-					<a href="" v-if="item.title == 'EXPERIENCIA'" class="ver-mas btn btn-outline-primary mt-2 p-3 lead">Ver
-						más</a>
-					<galery v-if="item.title == 'GALERIA'"></galery>
-					<a href="" v-if="item.title == 'GALERIA'" class="ver-mas btn btn-outline-primary mt-2 p-3 lead">Ver
-						más</a>
-					<about v-if="item.title == 'SOBRE MI'"></about>
-					<contact v-if="item.title == 'CONTACTO'"></contact>
+					<Experience v-if="item.title == 'Experience'"></Experience>
+					<galery v-if="item.title == 'Galery'"></galery>
+					<a href="" v-if="item.title == 'Galery'" class="ver-mas btn btn-outline-primary mt-2 p-3 lead">{{ $t("More") }}</a>
+					<about v-if="item.title == 'About'"></about>
+					<contact v-if="item.title == 'Contact'"></contact>
 				</div>
 			</section>
 		</main>
@@ -42,19 +39,19 @@ components: {
 }
 const sections = [
 	{
-		title: "EXPERIENCIA",
-		clase: "d-flex flex-column gap-3",
+		title: "Experience",
+		clase: "d-flex flex-column gap-3 justify-content-center align-items-center",
 	},
 	{
-		title: "GALERIA",
+		title: "Galery",
 		clase: "d-flex flex-column gap-2 justify-content-start",
 	},
 	{
-		title: "SOBRE MI",
+		title: "About",
 		clase: "",
 	},
 	{
-		title: "CONTACTO",
+		title: "Contact",
 		clase: "",
 	},
 ];

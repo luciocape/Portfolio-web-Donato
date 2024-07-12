@@ -1,16 +1,16 @@
 <template>
 	<article v-for="(item, index) in experiencies" :key="index"
-		class="experience-container d-flex align-items-center gap-3 w-100 p-3 pt-4 pb-4 rounded-3 ">
-		<div class="title">
-			<h3 class="mb-0">{{ item.company }}</h3>
-			<p class="mb-0">{{ item.job }}</p>
-			<p class="mb-0 duration">{{ item.duration }}</p>
+		class="experience-container d-flex flex-column justify-content-start align-items-center gap-5 w-100 p-3 pt-4 pb-4 rounded-3 ">
+		<div class="title mt-4">
+			<h3 class="mb-0">{{ $t("Experience." + item.company + ".company") }}</h3>
+			<p class="mb-0">{{ $t("Experience." + item.company + ".job") }}</p>
+			<p class="mb-0 duration">{{ $t("Experience." + item.company + ".duration") }}</p>
 		</div>
 		<div class="summary w-auto">
-			<p class="mb-1">{{ item.description }}</p>
+			<p class="mb-1">{{ $t("Experience.Experience1.description") }}</p>
 			<div class="d-flex flex-wrap gap-2">
 				<span v-for="(element, index) in item.tags" :key="index"
-					class=" tag bg-secondary bg-opacity-50 text-primary rounded-5 text-nowrap">{{ element }}</span>
+					class=" tag bg-secondary bg-opacity-50 text-primary rounded-5 text-nowrap">{{ $t("Experience.Experience1.tags[" + element + "]" ) }}</span>
 			</div>
 		</div>
 	</article>
@@ -19,28 +19,12 @@
 name: "Experience";
 const experiencies = [
 	{
-		company: "Insta Rekreative",
+		company: "Experience1",
 		job: "Editor de video",
 		duration: "2022-presente",
 		description:
 			"lorem ipsum dolor sit amet, consectetur adipiscing el aspect ratio nisl con et et dolor in eget et dolore magna al e fits",
-		tags: ["Midjourney", "Canva", "Premier pro"],
-	},
-	{
-		company: "Insta Rekreative",
-		job: "Editor de video",
-		duration: "2022-presente",
-		description:
-			"lorem ipsum dolor sit amet, consectetur adipiscing el aspect ratio nisl con et et dolor in eget et dolore magna al e fits",
-		tags: ["Midjourney", "Canva", "Premier pro"],
-	},
-	{
-		company: "Insta Rekreative",
-		job: "Editor de video",
-		duration: "2022-presente",
-		description:
-			"lorem ipsum dolor sit amet, consectetur adipiscing el aspect ratio nisl con et et dolor in eget et dolore magna al e fits",
-		tags: ["Midjourney", "Canva", "Premier pro"],
+		tags: ["0", "1"],
 	},
 ];
 </script>
@@ -49,6 +33,7 @@ const experiencies = [
 @import '../../assets/bootstrap-custom.scss';
 .experience-container {
 	background-color: rgba(var(--ocean-rgb),0.5);
+	min-height: 50vh;
 	height: 100%;
 	border: 1px solid transparent;
 	box-shadow: 0px 0px 20px -2px var(--shadow-rgb);

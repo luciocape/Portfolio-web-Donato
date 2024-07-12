@@ -6,7 +6,7 @@
                 <input type="radio" name="slide" :id="'v' + item.id" :checked="item.state" class="d-none" />
                 <label :for="'v' + item.id"
                     class="card bg-black rounded-5 overflow-hidden align-items-start justify-content-end p-2 pb-0">
-                    <video :src="item.url" autoplay muted playsinline loop class="position-absolute"></video>
+                    <!-- <iframe width="300" height="315" class="" :src="item.url + '?autoplay=1&loop=1&mute=1&controls=0'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                     <div class="filtro bg-black bg-opacity-50 position-absolute"
                         style="height: 100%; width: 100%; z-index: 50;"></div>
                     <div class="rowl d-flex flex-nowrap text-body align-items-center justify-content-start gap-2"
@@ -34,7 +34,7 @@ const videos = [
         state: true,
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
-        url: "../../../contenido/estilo-avanzado.mp4",
+        url: "https://www.youtube.com/embed/8hKZ5qFuwis",
     },
 
     {
@@ -42,7 +42,7 @@ const videos = [
         state: false,
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
-        url: "../../../contenido/hormozi.mp4",
+        url: "https://youtube.com/embed/AUZ5upqtoaI",
     },
 ];
 </script>

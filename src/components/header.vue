@@ -3,9 +3,9 @@
 		<header class="position-sticky">
 			<navSection v-if="screenSize < 850"></navSection>
 			<section>
-				<div class="picture"></div>
+				<div class="picture overflow-hidden d-flex justify-content-center align-items-center"><img src="../../contenido/perfil_img.webp" alt="Donato Infantino" class="w-100 p-1 rounded-circle"></div>
 				<h1 class="mb-3">{{ name }}</h1>
-				<h2>{{ job }}</h2>
+				<h2>{{ $t( "Job" ) }}</h2>
 				<div class="mt-3 mb-5 d-flex align-items-center gap-3">
 					<a href="https://www.linkedin.com/in/donato-infantino-7006002a0/"
 						class="open-to-work-btn btn btn-outline-light bg-black bg-opacity-25  rounded-5 border-2 border-dark border-opacity-25 p-2 d-flex align-items-center justify-content-evenly">
@@ -50,7 +50,6 @@ components: {
 }
 
 const name = "Donato Infantino";
-const job = "Editor de video";
 const screenSize = ref(window.innerWidth);
 const mode = ref('');
 
@@ -104,18 +103,25 @@ onUnmounted(() => {
 			width: 100%;
 
 			.picture {
-				width: 27vh;
-				height: 27vh;
+				width: 27.5vh;
+				height: 27.5vh;
 				border-radius: 50%;
 				box-shadow: -10px 18px 20px var(--ocean);
 				background-color: var(--bs-primary);
 				margin-bottom: 10px;
-				transition: 300ms;
+				transition: 100ms ease;
+				img{
+					transition: 300ms linear;
+				}
 			}
 
 			.picture:hover {
 				box-shadow: 0px 0px 25px var(--shadow-rgb);
 				border: 3px solid var(--bs-light);
+				align-items: end;
+				img{
+					width: 115%!important;
+				}
 
 			}
 
