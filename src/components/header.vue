@@ -113,16 +113,14 @@ onUnmounted(() => {
 				img{
 					transition: 300ms linear;
 				}
-			}
-
-			.picture:hover {
-				box-shadow: 0px 0px 25px var(--shadow-rgb);
-				border: 3px solid var(--bs-light);
-				align-items: end;
-				img{
-					width: 115%!important;
+				&:hover{
+					box-shadow: 0px 0px 25px 10px var(--shadow-rgb);
+					border: 3px solid var(--bs-light);
+					align-items: end;
+					img{
+						width: 115%!important;
+					}	
 				}
-
 			}
 
 			p {

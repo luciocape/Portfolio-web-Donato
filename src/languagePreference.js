@@ -8,7 +8,7 @@ export default{
             title:"Experiencia",
             Experience1:{
                 company:"Pro P Company",
-                job:"Co Founder",
+                job:"Co Fundador",
                 duration:"Agosto 2023 - Actualidad",
                 description:"He podido duplicar las ventas de Rio Lenceria, tener testimonios satisfactorios de referentes como “Insta Rekreative” y he aparecido en el perfil de Renzo Martos / Alex Dey",
                 tags:["Premier pro", "Midjourney" ],
