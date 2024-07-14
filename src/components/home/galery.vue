@@ -5,11 +5,11 @@
                 class="container contendor-proyect d-flex flex-nowrap justify-content-center m-0 p-0">
                 <input type="radio" name="slide" :id="'v' + item.id" :checked="item.state" class="d-none" />
                 <label :for="'v' + item.id"
-                    class="card bg-black rounded-5 overflow-hidden align-items-start justify-content-end p-2 pb-0">
-                    <!-- <iframe width="300" height="315" class="" :src="item.url + '?autoplay=1&loop=1&mute=1&controls=0'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                    class="card bg-black rounded-5 overflow-hidden align-items-center justify-content-end p-2 pb-0">
+                    <!-- <iframe class="position-absolute" :class="item.className" :src="item.url + '?autoplay=1&loop=1&mute=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=' + item.videoId" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                     <div class="filtro bg-black bg-opacity-50 position-absolute"
                         style="height: 100%; width: 100%; z-index: 50;"></div>
-                    <div class="rowl d-flex flex-nowrap text-body align-items-center justify-content-start gap-2"
+                    <div class="rowl d-flex flex-nowrap text-body align-self-start align-items-center justify-content-start gap-2"
                         style="z-index: 100;">
                         <div
                             class="icon d-flex align-items-center justify-content-center bg-secondary text-light rounded-5">
@@ -34,7 +34,9 @@ const videos = [
         state: true,
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
+        className: "horizontal",
         url: "https://www.youtube.com/embed/8hKZ5qFuwis",
+        videoId: "8hKZ5qFuwis",
     },
 
     {
@@ -42,7 +44,27 @@ const videos = [
         state: false,
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
+        className: "short",
         url: "https://youtube.com/embed/AUZ5upqtoaI",
+        videoId: "AUZ5upqtoaI",
+    },
+    {
+        id: "3",
+        state: false,
+        title: "video 1",
+        description: "lorem ipsum dolor sit amet",
+        className: "horizontal",
+        url: "https://www.youtube.com/embed/0hBNclQGYvk",
+        videoId:"0hBNclQGYvk"
+    },
+    {
+        id: "4",
+        state: false,
+        title: "video 1",
+        description: "lorem ipsum dolor sit amet",
+        className: "short",
+        url: "https://www.youtube.com/embed/VCWx1MqEJy4",
+        videoId:"VCWx1MqEJy4"
     },
 ];
 </script>
@@ -77,11 +99,19 @@ const videos = [
     width: auto;
 }
 
-video {
+iframe {
     top: 0;
     align-self: center;
-    min-height: 290px;
-    height: 110%;
+    
+    .short{
+        min-height: 290px!important;
+        height: 110%!important;
+    }
+
+    .horizontal{
+        min-height: 1000px!important;
+        height: 500%!important;
+    }
 }
 
 .card {

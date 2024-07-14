@@ -1,6 +1,6 @@
 <template>
 	<article v-for="(item, index) in experiencies" :key="index"
-		class="experience-container position-relative d-flex flex-column justify-content-start align-items-center w-100 p-3 pt-4 pb-4 rounded-3 ">
+		class="experience-container position-relative d-flex flex-column justify-content-start align-items-center w-100 p-5 rounded-3 ">
 		<div class="conteiner-div h-100 d-flex flex-column">
 			<img src="../../../public/contenido/propcompany_logo.webp" width="100" height="100" alt="Pro.P Company">
 			<div class="title mt-3 mb-4">

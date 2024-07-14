@@ -97,7 +97,7 @@ onUnmounted(() => {
 
 	header {
 		max-width: 100%;
-		top: 25px;
+		top: 5vh;
 
 		section {
 			width: 100%;
@@ -105,6 +105,10 @@ onUnmounted(() => {
 			.picture {
 				width: 27.5vh;
 				height: 27.5vh;
+				max-width: 250px;
+				max-height: 250px;
+				min-width: 100px;
+				min-height: 100px;
 				border-radius: 50%;
 				box-shadow: -10px 18px 20px var(--ocean);
 				background-color: var(--bs-primary);
@@ -144,7 +148,7 @@ onUnmounted(() => {
 	.contenedor-header {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
-		margin-bottom: 25vh;
+		margin-bottom: 20vh;
 		width: 100%;
 		height: 75vh;
 		display: flex;
@@ -152,7 +156,7 @@ onUnmounted(() => {
 
 		header {
 			position: relative !important;
-			;
+			margin-top: 200px;
 		}
 	}
 }
