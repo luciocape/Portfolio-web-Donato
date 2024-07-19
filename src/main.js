@@ -9,12 +9,13 @@ import languagePreference from './languagePreference';
 
 
 const i18n = createI18n({
+    legacy: false,
+    globalInjection: true,
     messages: languagePreference,
     falltbackformat: 'en',
     locale: navigator.language.startsWith('en') ? 'en' : 'es',
 })
 const app = createApp(App)
-app.use(bootstrap)
 app.use(router)
 app.use(i18n)
 app.mount('#app')

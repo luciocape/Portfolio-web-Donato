@@ -24,7 +24,9 @@ export default{
         },
         About:{
             title:"Sobre mi",
-            description:"Mi nombre es Donato Infantino y me especializo en la edición de videos. He tenido el privilegio de trabajar conprominentes figuras de las redes sociales, como \"Insta_Rekreative\", quienes han expresado su plena satisfacción con mis servicios.<br><br>Además de mi experiencia en edición de videos, también poseo habilidades destacadas en la optimización de perfiles en redes sociales. Mis servicios abarcan desde la creación de guiones hasta el desarrollo de estrategias de contenido y ventas.<br><br>Si estás buscando elevar el impacto y la calidad de tus videos, o mejorar la presencia y el rendimiento de tus perfiles en línea, ¡no dudes en ponerte en contacto conmigo!"
+            description1:"Mi nombre es Donato Infantino y me especializo en la edición de videos. He tenido el privilegio de trabajar conprominentes figuras de las redes sociales, como \"Insta_Rekreative\", quienes han expresado su plena satisfacción con mis servicios.",
+            description2:"Además de mi experiencia en edición de videos, también poseo habilidades destacadas en la optimización de perfiles en redes sociales. Mis servicios abarcan desde la creación de guiones hasta el desarrollo de estrategias de contenido y ventas.",
+            description3:"Si estás buscando elevar el impacto y la calidad de tus videos, o mejorar la presencia y el rendimiento de tus perfiles en línea, ¡no dudes en ponerte en contacto conmigo!"
         },
         Contact:{
             title:"Contacto",
@@ -65,7 +67,10 @@ export default{
         },
         About:{
             title:"About me",
-            description:"My name is Donato Infantino, and I specialize in video editing. I've had the privilege of working with prominent social media figures, such as \"Insta_Rekreative,\" who have expressed their full satisfaction with my services.<br><br>In addition to my video editing experience, I also possess outstanding skills in optimizing social media profiles. My services range from script creation to content and sales strategy development.<br><br>If you're looking to enhance the impact and quality of your videos or improve the presence and performance of your online profiles, feel free to get in touch with me!"
+            description1:"My name is Donato Infantino, and I specialize in video editing. I've had the privilege of working with prominent social media figures, such as \"Insta_Rekreative,\" who have expressed their full satisfaction with my services.",
+            description2:"In addition to my video editing experience, I also possess outstanding skills in optimizing social media profiles. My services range from script creation to content and sales strategy development.",
+            description3:"If you're looking to enhance the impact and quality of your videos or improve the presence and performance of your online profiles, feel free to get in touch with me!"
+            
         },
         Contact:{
             title:"Contact",

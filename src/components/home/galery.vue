@@ -6,7 +6,7 @@
                 <input type="radio" name="slide" :id="'v' + item.id" :checked="item.state" class="d-none" />
                 <label :for="'v' + item.id"
                     class="card bg-black rounded-5 overflow-hidden align-items-center justify-content-end p-2 pb-0">
-                    <!-- <iframe class="position-absolute" :class="item.className" :src="item.url + '?autoplay=1&loop=1&mute=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=' + item.videoId" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                    <!-- <iframe :class="item.className" loading="lazy" :src="item.url + '?autoplay=1&loop=1&controls=0&mute=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=' + item.videoId" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                     <div class="filtro bg-black bg-opacity-50 position-absolute"
                         style="height: 100%; width: 100%; z-index: 50;"></div>
                     <div class="rowl d-flex flex-nowrap text-body align-self-start align-items-center justify-content-start gap-2"
@@ -35,7 +35,7 @@ const videos = [
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
         className: "horizontal",
-        url: "https://www.youtube.com/embed/8hKZ5qFuwis",
+        url: "https://www.youtube-nocookie.com/embed/8hKZ5qFuwis",
         videoId: "8hKZ5qFuwis",
     },
 
@@ -45,8 +45,8 @@ const videos = [
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
         className: "short",
-        url: "https://youtube.com/embed/AUZ5upqtoaI",
-        videoId: "AUZ5upqtoaI",
+        url: "https://www.youtube-nocookie.com/embed/JmlL67bU1N0",
+        videoId: "JmlL67bU1N0",
     },
     {
         id: "3",
@@ -54,7 +54,7 @@ const videos = [
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
         className: "horizontal",
-        url: "https://www.youtube.com/embed/0hBNclQGYvk",
+        url: "https://www.youtube-nocookie.com/embed/0hBNclQGYvk",
         videoId:"0hBNclQGYvk"
     },
     {
@@ -63,7 +63,7 @@ const videos = [
         title: "video 1",
         description: "lorem ipsum dolor sit amet",
         className: "short",
-        url: "https://www.youtube.com/embed/VCWx1MqEJy4",
+        url: "https://www.youtube-nocookie.com/embed/VCWx1MqEJy4",
         videoId:"VCWx1MqEJy4"
     },
 ];
@@ -100,20 +100,18 @@ const videos = [
 }
 
 iframe {
-    top: 0;
+    position: absolute;
     align-self: center;
-    
-    .short{
-        min-height: 290px!important;
-        height: 110%!important;
-    }
-
-    .horizontal{
-        min-height: 1000px!important;
-        height: 500%!important;
-    }
 }
-
+.short{
+    top: -50px;
+    height: 450px;
+}
+.horizontal{
+    top: -40px;
+    width: 700px;
+    height: 450px;
+}
 .card {
     width: 70px;
     transition: .6s cubic-bezier(.28, -0.03, 0, .99);
@@ -173,7 +171,10 @@ input:checked+label .description {
 
 @media only screen and (max-width: 992px) {
 
-
+    .short{
+    top: -50px;
+    height: 400px;
+}
     label {
         width: 100%;
         margin: auto;
