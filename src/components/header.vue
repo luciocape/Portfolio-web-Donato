@@ -7,7 +7,7 @@
 				<h1 class="mb-3">{{ name }}</h1>
 				<h2>{{ $t( "Job" ) }}</h2>
 				<div class="mt-3 mb-5 d-flex align-items-center gap-3">
-					<a href="https://www.linkedin.com/in/donato-infantino-7006002a0/"
+					<a href="https://www.linkedin.com/in/donato-infantino-7006002a0/" target="_blank"
 						class="open-to-work-btn btn btn-outline-light bg-black bg-opacity-25  rounded-5 border-2 border-dark border-opacity-25 p-2 d-flex align-items-center justify-content-evenly">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
 							class="bi bi-linkedin" viewBox="0 0 16 16">

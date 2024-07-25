@@ -6,18 +6,17 @@
                 <input type="radio" name="slide" :id="'v' + item.id" :checked="item.state" class="d-none" />
                 <label :for="'v' + item.id"
                     class="card bg-black rounded-5 overflow-hidden align-items-center justify-content-end p-2 pb-0">
-                    <!-- <iframe :class="item.className" loading="lazy" :src="item.url + '?autoplay=1&loop=1&controls=0&mute=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=' + item.videoId" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-                    <div class="filtro bg-black bg-opacity-50 position-absolute"
-                        style="height: 100%; width: 100%; z-index: 50;"></div>
+                    <iframe :class="item.className" loading="lazy" :src="item.url + '?controls=0&mute=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=' + item.videoId" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="filtro w-100 position-absolute"></div>
                     <div class="rowl d-flex flex-nowrap text-body align-self-start align-items-center justify-content-start gap-2"
                         style="z-index: 100;">
                         <div
                             class="icon d-flex align-items-center justify-content-center bg-secondary text-light rounded-5">
                             {{ item.id }}
                         </div>
-                        <div class="description d-flex flex-column justify-content-center overflow-hidden">
-                            <h3 class="text-uppercase mb-0">{{ item.title }}</h3>
-                            <p class="pt-1 mb-0">{{ item.description }}</p>
+                        <div class="description position-relative d-flex flex-column justify-content-center overflow-hidden">
+                            <h3 class="text-uppercase mb-0">{{ $t("Galery." + item.title + ".title") }}</h3>
+                            <p class="pt-1 mb-0">{{ $t("Galery." + item.title + ".description") }}</p>
                         </div>
                     </div>
                 </label>
@@ -32,7 +31,7 @@ const videos = [
     {
         id: "1",
         state: true,
-        title: "video 1",
+        title: "video1",
         description: "lorem ipsum dolor sit amet",
         className: "horizontal",
         url: "https://www.youtube-nocookie.com/embed/8hKZ5qFuwis",
@@ -42,7 +41,7 @@ const videos = [
     {
         id: "2",
         state: false,
-        title: "video 1",
+        title: "video2",
         description: "lorem ipsum dolor sit amet",
         className: "short",
         url: "https://www.youtube-nocookie.com/embed/JmlL67bU1N0",
@@ -51,16 +50,16 @@ const videos = [
     {
         id: "3",
         state: false,
-        title: "video 1",
+        title: "video3",
         description: "lorem ipsum dolor sit amet",
-        className: "horizontal",
-        url: "https://www.youtube-nocookie.com/embed/0hBNclQGYvk",
-        videoId:"0hBNclQGYvk"
+        className: "short",
+        url: "https://www.youtube-nocookie.com/embed/AUZ5upqtoaI",
+        videoId:"AUZ5upqtoaI"
     },
     {
         id: "4",
         state: false,
-        title: "video 1",
+        title: "video4",
         description: "lorem ipsum dolor sit amet",
         className: "short",
         url: "https://www.youtube-nocookie.com/embed/VCWx1MqEJy4",
@@ -100,15 +99,15 @@ const videos = [
 }
 
 iframe {
-    position: absolute;
-    align-self: center;
+    position: absolute!important;
 }
 .short{
-    top: -50px;
+    top: -60px!important;
     height: 450px;
+    width: 550px;
 }
 .horizontal{
-    top: -40px;
+    top: -60px!important;
     width: 700px;
     height: 450px;
 }
@@ -120,6 +119,8 @@ iframe {
 }
 
 .filtro {
+    height: 15vh;
+    top: -5px;
     align-self: center;
     justify-self: center;
 }
@@ -156,7 +157,7 @@ input:checked+.card:hover {
 }
 
 input:checked+label {
-    width: 275px;
+    width: 300px;
 }
 
 input:checked  .rowl {

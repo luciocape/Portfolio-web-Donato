@@ -15,7 +15,7 @@
 				<div class="border-start border-2 border-light border-opacity-75 section-body mt-1" :class="item.clase">
 					<Experience v-if="item.title == 'Experience'"></Experience>
 					<galery v-if="item.title == 'Galery'"></galery>
-					<a href="" v-if="item.title == 'Galery'" class="ver-mas btn btn-outline-primary mt-2 p-3 lead">{{ $t("More") }}</a>
+					<a href="https://drive.google.com/drive/folders/1x7wtZp3RlMt4Wl5OhcmiTGkn1TY341Ij?usp=drive_link" target="_blank" v-if="item.title == 'Galery'" class="ver-mas btn btn-outline-primary mt-2 p-3 lead">{{ $t("More") }}</a>
 					<about v-if="item.title == 'About'"></about>
 					<contact v-if="item.title == 'Contact'"></contact>
 				</div>
@@ -126,11 +126,17 @@ main {
 }
 
 @media only screen and (max-width: 550px) {
-
-	.section-body:nth-child(n) {
-		border-top: 2px solid $light;
-		border-left: 0px !important;
-		padding-left: 0px !important;
+	main{
+		section{
+			margin-bottom: 0;
+			.section-body:nth-child(n) {
+			border-top: 2px solid $light;
+			border-left: 0px !important;
+			padding-left: 0px !important;
+			}
+		}
 	}
+
+
 }
 </style>

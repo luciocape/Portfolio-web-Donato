@@ -15,15 +15,26 @@ export default{
             }
         },
         Galery:{
-            title:"Galeria",
+            title:"Galería",
             video1:{
-                title:"Experiencia",
+                title:"Estilo avanzado",
                 description:"",
-                url:""
+            },
+            video2:{
+                title:"Estilo avanzado Emi",
+                description:"",
+            },
+            video3:{
+                title:"Hormozi",
+                description:"",
+            },
+            video4:{
+                title:"Estilo avanzado Dylan",
+                description:"",
             }
         },
         About:{
-            title:"Sobre mi",
+            title:"Sobre mí",
             description1:"Mi nombre es Donato Infantino y me especializo en la edición de videos. He tenido el privilegio de trabajar conprominentes figuras de las redes sociales, como \"Insta_Rekreative\", quienes han expresado su plena satisfacción con mis servicios.",
             description2:"Además de mi experiencia en edición de videos, también poseo habilidades destacadas en la optimización de perfiles en redes sociales. Mis servicios abarcan desde la creación de guiones hasta el desarrollo de estrategias de contenido y ventas.",
             description3:"Si estás buscando elevar el impacto y la calidad de tus videos, o mejorar la presencia y el rendimiento de tus perfiles en línea, ¡no dudes en ponerte en contacto conmigo!"
@@ -34,7 +45,7 @@ export default{
                 label:"Tu nombre",
             },
             input2:{
-                label:"Tu correo electronico",
+                label:"Tu correo electrónico",
             },
             input3:{
                 label:"Tu mensaje",
@@ -61,8 +72,20 @@ export default{
         Galery:{
             title:"Galery",
             video1:{
-                title:"",
-                url:""
+                title:"Advanced style",
+                description:"",
+            },
+            video2:{
+                title:"Advanced style Emi",
+                description:"",
+            },
+            video3:{
+                title:"Hormozi",
+                description:"",
+            },
+            video4:{
+                title:"Advanced style Dylan",
+                description:"",
             }
         },
         About:{

@@ -3,7 +3,7 @@
         <footer
             class="d-flex flex-wrap justify-content-md-between justify-content-center align-items-center gap-3 py-3 my-4 border-top text-light">
             <p class="h5 text-center ms-3 m-auto me-0">{{ $t("Footer") }} <a
-                    href="https://www.linkedin.com/in/lucio-capezzuto" class="btn-link">Lucio Capezzuto</a></p>
+                    href="https://www.linkedin.com/in/lucio-capezzuto" target="_blank" class="btn-link">Lucio Capezzuto</a></p>
 
             <a href="#header" class="button-up rounded-3 text-light me-md-5 position-relative">
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor"

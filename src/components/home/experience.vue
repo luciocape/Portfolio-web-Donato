@@ -4,7 +4,7 @@
 		<div class="conteiner-div h-100 d-flex flex-column">
 			<img src="../../../public/contenido/propcompany_logo.webp" width="100" height="100" alt="Pro.P Company">
 			<div class="title mt-3 mb-4">
-				<h3 class="mb-0"><a href="https://www.linkedin.com/company/propcompany/" class="h3">{{ $t("Experience." + item.company + ".company") }} <span class="position-absolute w-100 h-100 top-0 start-0"></span></a></h3>
+				<h3 class="mb-0"><a href="https://www.linkedin.com/company/propcompany/" target="_blank" class="h3">{{ $t("Experience." + item.company + ".company") }} <span class="position-absolute w-100 h-100 top-0 start-0"></span></a></h3>
 				<p class="mb-0">{{ $t("Experience." + item.company + ".job") }}</p>
 				<p class="mb-0 duration">{{ $t("Experience." + item.company + ".duration") }}</p>
 			</div>
