@@ -12,7 +12,7 @@ const i18n = createI18n({
     legacy: false,
     globalInjection: true,
     messages: languagePreference,
-    falltbackformat: 'en',
+    falltbackformat: 'es',
     locale: navigator.language.startsWith('en') ? 'en' : 'es',
 })
 const app = createApp(App)
