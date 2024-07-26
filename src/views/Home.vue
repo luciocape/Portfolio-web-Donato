@@ -40,7 +40,7 @@ components: {
 const sections = [
 	{
 		title: "Experience",
-		clase: "d-flex flex-column gap-3 justify-content-center align-items-center",
+		clase: "d-flex flex-column gap-3 justify-content-start align-items-center",
 	},
 	{
 		title: "Galery",
@@ -90,7 +90,7 @@ main {
 
 	section {
 		padding-top: 11vh;
-		min-height: 80vh;
+		min-height: 70vh;
 		margin-bottom: 9vh;
 
 

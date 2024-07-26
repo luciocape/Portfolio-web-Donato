@@ -25,7 +25,7 @@ name: "Footer";
 
 <style lang="scss" scoped>
 .conteiner-footer {
-    margin-top: 15vh;
+    margin-top: 10vh;
 
     footer {
         p {
